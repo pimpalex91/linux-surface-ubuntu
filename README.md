@@ -52,7 +52,7 @@ cd ~/linux-surface<br />
  <br />
 Step 2.5: Optional installation of packages for your new system, add whatever packages you want<br />
 apt install nmap build-essential binutils-dev libncurses5-dev libssl-dev ccache bison flex libelf-dev tmux htop python<br />
-Install katoolin, and choose whatever packages you like if you want a pentesting focused usb<br />
+&nbsp;&nbsp;&nbsp;&nbsp;Install katoolin, and choose whatever packages you like if you want a pentesting focused usb<br />
  <br />
 Step 3: Modifying setup.sh<br />
 nano setup.sh<br />

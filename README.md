@@ -1,8 +1,7 @@
 # linux-surface-ubuntu<br />
 How to create your own live usb for surface pro 4 with touchscreen support + drivers<br />
-World's First Linux Live Usb for Microsoft Surface Pro 4 with all drivers.<br />
  <br />
-Guide has been repurposed frmo the following two sources:<br />
+Guide has been repurposed from the following two sources:<br />
 https://help.ubuntu.com/community/LiveCDCustomization<br />
 https://github.com/jakeday/linux-surface<br />
  <br />
@@ -53,6 +52,7 @@ cd ~/linux-surface<br />
  <br />
 Step 2.5: Optional installation of packages for your new system, add whatever packages you want<br />
 apt install nmap build-essential binutils-dev libncurses5-dev libssl-dev ccache bison flex libelf-dev tmux htop python<br />
+Install katoolin, and choose whatever packages you like if you want a pentesting focused usb<br />
  <br />
 Step 3: Modifying setup.sh<br />
 nano setup.sh<br />

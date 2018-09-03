@@ -36,16 +36,16 @@ mount -t devpts none /dev/pts<br />
 export HOME=/root<br />
 export LC_ALL=C<br />
 nano /etc/apt/sources.list # delete all lines then paste below<br />
-    deb http://archive.ubuntu.com/ubuntu/ bionic-backports main restricted universe multiverse<br />
-    deb http://archive.ubuntu.com/ubuntu/ bionic main restricted<br />
-    deb http://archive.ubuntu.com/ubuntu/ bionic multiverse<br />
-    deb http://archive.ubuntu.com/ubuntu/ bionic universe<br />
-    deb http://archive.ubuntu.com/ubuntu/ bionic-updates main restricted<br />
-    deb http://archive.ubuntu.com/ubuntu/ bionic-updates multiverse<br />
-    deb http://archive.ubuntu.com/ubuntu/ bionic-updates universe<br />
-    deb http://security.ubuntu.com/ubuntu bionic-security main restricted<br />
-    deb http://security.ubuntu.com/ubuntu bionic-security multiverse<br />
-    deb http://security.ubuntu.com/ubuntu bionic-security universe<br />
+&nbsp;&nbsp;&nbsp;&nbsp;deb http://archive.ubuntu.com/ubuntu/ bionic-backports main restricted universe multiverse<br />
+&nbsp;&nbsp;&nbsp;&nbsp;deb http://archive.ubuntu.com/ubuntu/ bionic main restricted<br />
+&nbsp;&nbsp;&nbsp;&nbsp;deb http://archive.ubuntu.com/ubuntu/ bionic multiverse<br />
+&nbsp;&nbsp;&nbsp;&nbsp;deb http://archive.ubuntu.com/ubuntu/ bionic universe<br />
+&nbsp;&nbsp;&nbsp;&nbsp;deb http://archive.ubuntu.com/ubuntu/ bionic-updates main restricted<br />
+&nbsp;&nbsp;&nbsp;&nbsp;deb http://archive.ubuntu.com/ubuntu/ bionic-updates multiverse<br />
+&nbsp;&nbsp;&nbsp;&nbsp;deb http://archive.ubuntu.com/ubuntu/ bionic-updates universe<br />
+&nbsp;&nbsp;&nbsp;&nbsp;deb http://security.ubuntu.com/ubuntu bionic-security main restricted<br />
+&nbsp;&nbsp;&nbsp;&nbsp;deb http://security.ubuntu.com/ubuntu bionic-security multiverse<br />
+&nbsp;&nbsp;&nbsp;&nbsp;deb http://security.ubuntu.com/ubuntu bionic-security universe<br />
 apt update<br />
 apt install git curl wget sed<br />
 git clone https://github.com/jakeday/linux-surface.git ~/linux-surface<br />
@@ -56,14 +56,14 @@ apt install nmap build-essential binutils-dev libncurses5-dev libssl-dev ccache 
  <br />
 Step 3: Modifying setup.sh<br />
 nano setup.sh<br />
-    Modify line 25:<br />
-    SUR_MODEL="$(dmidecode | grep "Product Name" -m 1 | xargs | sed -e 's/Product Name: //g')"<br />
-     to<br />
-    SUR_MODEL="Surface Pro 4"<br />
+&nbsp;&nbsp;&nbsp;&nbsp;Modify line 25:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;SUR_MODEL="$(dmidecode | grep "Product Name" -m 1 | xargs | sed -e 's/Product Name: //g')"<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to<br />
+&nbsp;&nbsp;&nbsp;&nbsp;SUR_MODEL="Surface Pro 4"<br />
  <br />
 Step 4: Installing kernel<br />
 sh setup.sh<br />
-    If given the option of 'yes/no' always type yes<br />
+&nbsp;&nbsp;&nbsp;&nbsp;If given the option of 'yes/no' always type yes<br />
  <br />
 Step 5: Cleaning up<br />
 apt clean<br />
@@ -106,9 +106,9 @@ cd ..<br />
  <br />
 Step 11: Testing the iso in qemu<br />
 sudo kvm -cdrom surface-pro-4-live-usb.iso -boot d -m 3000<br />
-    #Once it boots open up terminal<br />
-    uname -a # check if the kernel is correct (ie: if it has the word surface in it)<br />
-    exit<br />
+&nbsp;&nbsp;&nbsp;&nbsp;#Once it boots open up terminal<br />
+&nbsp;&nbsp;&nbsp;&nbsp;uname -a # check if the kernel is correct (ie: if it has the word surface in it)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;exit<br />
  <br />
 Step 12: Writing to usb stick<br />
 #Do not use unetbootin or dd to write this image to a usb stick.<br />
